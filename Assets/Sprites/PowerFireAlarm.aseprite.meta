@@ -2,7 +2,12 @@ fileFormatVersion: 2
 guid: 2d90ecee1da2b47ee99b28d6dd4f3069
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: PowerAlarmTrigger
+    second: {fileID: 7400000, guid: 87ee6852c7cbb454e9fe0319acfc8e38, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -97,7 +102,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638941785692597390
+  platformSettingsDirtyTick: 638941833441083310
   textureAssetName: 
   singleSpriteImportData:
   - name: 

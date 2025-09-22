@@ -2,7 +2,32 @@ fileFormatVersion: 2
 guid: e6e2a70c01c8c423c94477ee77e4c5e9
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Dead
+    second: {fileID: 7400000, guid: c87cdf42115a047f9b6fa46f359b2a33, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Down
+    second: {fileID: 7400000, guid: 2e57c9b59de31412e89f84d7a9eaa38f, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Left
+    second: {fileID: 7400000, guid: 5d4f66904a94149128c549da349486c3, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Right
+    second: {fileID: 7400000, guid: 056060a8d13c8453ca47193cee3e6a80, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Up
+    second: {fileID: 7400000, guid: 8974762d88fd94cdebc8da6f61105cd6, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -97,7 +122,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638941785692604150
+  platformSettingsDirtyTick: 638941828976064490
   textureAssetName: 
   singleSpriteImportData:
   - name: 
