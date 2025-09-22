@@ -1,0 +1,835 @@
+fileFormatVersion: 2
+guid: e753143c4daa34233857bf0294cb3d8f
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 32
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638941785692612860
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: TeacherNormal_Green_Frame_0
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 84
+      width: 16
+      height: 31
+    spriteID: 142e79b27ee7241c2ad3f36e7b275531
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 84}
+  - name: TeacherNormal_Green_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 16
+      height: 32
+    spriteID: 56c587b39ef8e420e879afc6771c5580
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: TeacherNormal_Green_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 123
+      width: 16
+      height: 31
+    spriteID: 8859ba6f4a6b141558fbb0a4f9231c56
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 123}
+  - name: TeacherNormal_Green_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 162
+      width: 16
+      height: 31
+    spriteID: 3dbe8f025322a405cb4cf76668a07683
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 162}
+  - name: TeacherNormal_Green_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 44
+      width: 16
+      height: 32
+    spriteID: c6b026f6d7cd94993803d124e794e338
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 44}
+  - name: TeacherNormal_Green_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 201
+      width: 16
+      height: 31
+    spriteID: b7d0e71519392430c8c56f81d4863bdb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 201}
+  - name: TeacherNormal_Green_Frame_6
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 82
+      width: 16
+      height: 30
+    spriteID: 33da03d077fe34b8eb1905aef448d78d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 82}
+  - name: TeacherNormal_Green_Frame_7
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 4
+      width: 16
+      height: 31
+    spriteID: f7b078714f5ac4748a64d6a7caf9a121
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 4}
+  - name: TeacherNormal_Green_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 120
+      width: 16
+      height: 30
+    spriteID: db775aa5a2a6d44068c564fd24b3604b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 120}
+  - name: TeacherNormal_Green_Frame_9
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 158
+      width: 16
+      height: 30
+    spriteID: 5245bee62793940229c501b73a9bd126
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 158}
+  - name: TeacherNormal_Green_Frame_10
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 43
+      width: 16
+      height: 31
+    spriteID: ed69751db5318411b8109758157258b9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 43}
+  - name: TeacherNormal_Green_Frame_11
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 196
+      width: 16
+      height: 30
+    spriteID: 5b5507e0abc3343bf935447759a594d7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 196}
+  - name: TeacherNormal_Green_Frame_12
+    originalName: 
+    pivot: {x: 0.54545456, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 160
+      width: 11
+      height: 31
+    spriteID: 157a05307bdda4a6f9579bcdfdbf637e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 160}
+  - name: TeacherNormal_Green_Frame_13
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 4
+      width: 14
+      height: 31
+    spriteID: d53b5356c2a25412fad472472a03037e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 4}
+  - name: TeacherNormal_Green_Frame_14
+    originalName: 
+    pivot: {x: 0.54545456, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 199
+      width: 11
+      height: 31
+    spriteID: dfed9ac8b1aac4dd082fd76c8cc9bedb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 199}
+  - name: TeacherNormal_Green_Frame_15
+    originalName: 
+    pivot: {x: 0.54545456, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 4
+      width: 11
+      height: 31
+    spriteID: 79eba9b41bbad4228bd702ca20530f6f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 4}
+  - name: TeacherNormal_Green_Frame_16
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 43
+      width: 14
+      height: 31
+    spriteID: ad6090adad1f74e20af7a89f12d06e47
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 43}
+  - name: TeacherNormal_Green_Frame_17
+    originalName: 
+    pivot: {x: 0.54545456, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 43
+      width: 11
+      height: 31
+    spriteID: 4d97f85a59ecc4130bd6c80a9e10e756
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 43}
+  - name: TeacherNormal_Green_Frame_18
+    originalName: 
+    pivot: {x: 0.45454547, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 82
+      width: 11
+      height: 31
+    spriteID: df8bd2c363e4041a598943531150097c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 82}
+  - name: TeacherNormal_Green_Frame_19
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 82
+      width: 14
+      height: 31
+    spriteID: edbb5a20ff06e46989e109d6eb6cc6f8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 82}
+  - name: TeacherNormal_Green_Frame_20
+    originalName: 
+    pivot: {x: 0.45454547, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 121
+      width: 11
+      height: 31
+    spriteID: e030daef1171645e4ae9d096b60ed978
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 121}
+  - name: TeacherNormal_Green_Frame_21
+    originalName: 
+    pivot: {x: 0.45454547, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 160
+      width: 11
+      height: 31
+    spriteID: 4f71f67e6df1844969638d3bae524e19
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 160}
+  - name: TeacherNormal_Green_Frame_22
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 121
+      width: 14
+      height: 31
+    spriteID: e6753bebc19694e83a3daea03e87b1dd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 121}
+  - name: TeacherNormal_Green_Frame_23
+    originalName: 
+    pivot: {x: 0.45454547, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 199
+      width: 11
+      height: 31
+    spriteID: 21f79e1ae98a84910bedb6a831d494eb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 199}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 130733083
+    name: TeacherNormal_Green
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: TeacherNormal_Green_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 31
+      spriteId: 142e79b27ee7241c2ad3f36e7b275531
+    - name: TeacherNormal_Green_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 32
+      spriteId: 56c587b39ef8e420e879afc6771c5580
+    - name: TeacherNormal_Green_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 31
+      spriteId: 8859ba6f4a6b141558fbb0a4f9231c56
+    - name: TeacherNormal_Green_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 31
+      spriteId: 3dbe8f025322a405cb4cf76668a07683
+    - name: TeacherNormal_Green_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 32
+      spriteId: c6b026f6d7cd94993803d124e794e338
+    - name: TeacherNormal_Green_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 31
+      spriteId: b7d0e71519392430c8c56f81d4863bdb
+    - name: TeacherNormal_Green_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 30
+      spriteId: 33da03d077fe34b8eb1905aef448d78d
+    - name: TeacherNormal_Green_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 31
+      spriteId: f7b078714f5ac4748a64d6a7caf9a121
+    - name: TeacherNormal_Green_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 30
+      spriteId: db775aa5a2a6d44068c564fd24b3604b
+    - name: TeacherNormal_Green_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 30
+      spriteId: 5245bee62793940229c501b73a9bd126
+    - name: TeacherNormal_Green_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 31
+      spriteId: ed69751db5318411b8109758157258b9
+    - name: TeacherNormal_Green_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 30
+      spriteId: 5b5507e0abc3343bf935447759a594d7
+    - name: TeacherNormal_Green_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 10
+        y: 0
+        width: 11
+        height: 31
+      spriteId: 157a05307bdda4a6f9579bcdfdbf637e
+    - name: TeacherNormal_Green_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 9
+        y: 0
+        width: 14
+        height: 31
+      spriteId: d53b5356c2a25412fad472472a03037e
+    - name: TeacherNormal_Green_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 10
+        y: 0
+        width: 11
+        height: 31
+      spriteId: dfed9ac8b1aac4dd082fd76c8cc9bedb
+    - name: TeacherNormal_Green_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 10
+        y: 0
+        width: 11
+        height: 31
+      spriteId: 79eba9b41bbad4228bd702ca20530f6f
+    - name: TeacherNormal_Green_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 9
+        y: 0
+        width: 14
+        height: 31
+      spriteId: ad6090adad1f74e20af7a89f12d06e47
+    - name: TeacherNormal_Green_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 10
+        y: 0
+        width: 11
+        height: 31
+      spriteId: 4d97f85a59ecc4130bd6c80a9e10e756
+    - name: TeacherNormal_Green_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 11
+        y: 0
+        width: 11
+        height: 31
+      spriteId: df8bd2c363e4041a598943531150097c
+    - name: TeacherNormal_Green_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 9
+        y: 0
+        width: 14
+        height: 31
+      spriteId: edbb5a20ff06e46989e109d6eb6cc6f8
+    - name: TeacherNormal_Green_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 11
+        y: 0
+        width: 11
+        height: 31
+      spriteId: e030daef1171645e4ae9d096b60ed978
+    - name: TeacherNormal_Green_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 11
+        y: 0
+        width: 11
+        height: 31
+      spriteId: 4f71f67e6df1844969638d3bae524e19
+    - name: TeacherNormal_Green_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 9
+        y: 0
+        width: 14
+        height: 31
+      spriteId: e6753bebc19694e83a3daea03e87b1dd
+    - name: TeacherNormal_Green_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 11
+        y: 0
+        width: 11
+        height: 31
+      spriteId: 21f79e1ae98a84910bedb6a831d494eb
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 32, y: 32}

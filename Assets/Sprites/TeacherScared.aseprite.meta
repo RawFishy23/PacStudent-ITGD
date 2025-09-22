@@ -1,0 +1,835 @@
+fileFormatVersion: 2
+guid: f836260d5b7784b97bb2e63d11175eec
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 32
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638941785692626200
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: TeacherScared_Frame_0
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 84
+      width: 16
+      height: 31
+    spriteID: 4114fd27e6687403b996c1357910dbb4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 84}
+  - name: TeacherScared_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 16
+      height: 32
+    spriteID: 182ec1d909c9b4e2aaf58d44c838e4c6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: TeacherScared_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 123
+      width: 16
+      height: 31
+    spriteID: d5302de0fdab4459b9a13da47622f462
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 123}
+  - name: TeacherScared_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 162
+      width: 16
+      height: 31
+    spriteID: b085273f1c94b4acd8809e4bcc641a65
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 162}
+  - name: TeacherScared_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 44
+      width: 16
+      height: 32
+    spriteID: b36b30bf16c3c484c908690ba2057d90
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 44}
+  - name: TeacherScared_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 201
+      width: 16
+      height: 31
+    spriteID: 9197d1ef787fa49d5b28a979db2c8f65
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 201}
+  - name: TeacherScared_Frame_6
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 82
+      width: 16
+      height: 30
+    spriteID: 021f13ecff1a341909cac415d2715c7c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 82}
+  - name: TeacherScared_Frame_7
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 4
+      width: 16
+      height: 31
+    spriteID: 4fcfec78c2fae4ed090a643e58c66425
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 4}
+  - name: TeacherScared_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 120
+      width: 16
+      height: 30
+    spriteID: f2a4b8aba745e42d7b0180db419eb8dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 120}
+  - name: TeacherScared_Frame_9
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 158
+      width: 16
+      height: 30
+    spriteID: a551f108aaffc4b47a1997c563c40188
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 158}
+  - name: TeacherScared_Frame_10
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 43
+      width: 16
+      height: 31
+    spriteID: 6475c85f510fe41b2b3ba908c7878768
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 43}
+  - name: TeacherScared_Frame_11
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 196
+      width: 16
+      height: 30
+    spriteID: 009044d1373f14b93a7a3e483e456e6b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 196}
+  - name: TeacherScared_Frame_12
+    originalName: 
+    pivot: {x: 0.54545456, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 160
+      width: 11
+      height: 31
+    spriteID: 4f3ccdc9ff11a4574a8a5211711677cc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 160}
+  - name: TeacherScared_Frame_13
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 4
+      width: 14
+      height: 31
+    spriteID: 61052d6724c8449f6bfd87bc8fa5e777
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 4}
+  - name: TeacherScared_Frame_14
+    originalName: 
+    pivot: {x: 0.54545456, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 199
+      width: 11
+      height: 31
+    spriteID: e6f24b91080584e6e9757d2efe3a0fca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 199}
+  - name: TeacherScared_Frame_15
+    originalName: 
+    pivot: {x: 0.54545456, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 4
+      width: 11
+      height: 31
+    spriteID: 83a0959c8d5e3431a9ec678d0243b1d7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 4}
+  - name: TeacherScared_Frame_16
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 43
+      width: 14
+      height: 31
+    spriteID: e08fb99502136446b8cdebe0a339939b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 43}
+  - name: TeacherScared_Frame_17
+    originalName: 
+    pivot: {x: 0.54545456, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 43
+      width: 11
+      height: 31
+    spriteID: 95e835a17a17e40999ded627eefd3773
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 43}
+  - name: TeacherScared_Frame_18
+    originalName: 
+    pivot: {x: 0.45454547, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 82
+      width: 11
+      height: 31
+    spriteID: 4bb44df7bc87d427f95d0ddc3c987c4f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 82}
+  - name: TeacherScared_Frame_19
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 82
+      width: 14
+      height: 31
+    spriteID: eb1a83601105944918f0f0df4211b15a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 82}
+  - name: TeacherScared_Frame_20
+    originalName: 
+    pivot: {x: 0.45454547, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 121
+      width: 11
+      height: 31
+    spriteID: 11752e95a133648669464c7ade7af566
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 121}
+  - name: TeacherScared_Frame_21
+    originalName: 
+    pivot: {x: 0.45454547, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 160
+      width: 11
+      height: 31
+    spriteID: 15ec047638fb94414a984afc95af9d25
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 160}
+  - name: TeacherScared_Frame_22
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 121
+      width: 14
+      height: 31
+    spriteID: 8ba93cbe7e3fb450c9aa333761da7d0d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 121}
+  - name: TeacherScared_Frame_23
+    originalName: 
+    pivot: {x: 0.45454547, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 199
+      width: 11
+      height: 31
+    spriteID: ad725a0e1dca044ac9f474fdca828ac7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 199}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1276313916
+    name: TeacherScared
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: TeacherScared_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 31
+      spriteId: 4114fd27e6687403b996c1357910dbb4
+    - name: TeacherScared_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 32
+      spriteId: 182ec1d909c9b4e2aaf58d44c838e4c6
+    - name: TeacherScared_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 31
+      spriteId: d5302de0fdab4459b9a13da47622f462
+    - name: TeacherScared_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 31
+      spriteId: b085273f1c94b4acd8809e4bcc641a65
+    - name: TeacherScared_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 32
+      spriteId: b36b30bf16c3c484c908690ba2057d90
+    - name: TeacherScared_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 31
+      spriteId: 9197d1ef787fa49d5b28a979db2c8f65
+    - name: TeacherScared_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 30
+      spriteId: 021f13ecff1a341909cac415d2715c7c
+    - name: TeacherScared_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 31
+      spriteId: 4fcfec78c2fae4ed090a643e58c66425
+    - name: TeacherScared_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 30
+      spriteId: f2a4b8aba745e42d7b0180db419eb8dc
+    - name: TeacherScared_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 30
+      spriteId: a551f108aaffc4b47a1997c563c40188
+    - name: TeacherScared_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 31
+      spriteId: 6475c85f510fe41b2b3ba908c7878768
+    - name: TeacherScared_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 30
+      spriteId: 009044d1373f14b93a7a3e483e456e6b
+    - name: TeacherScared_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 10
+        y: 0
+        width: 11
+        height: 31
+      spriteId: 4f3ccdc9ff11a4574a8a5211711677cc
+    - name: TeacherScared_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 9
+        y: 0
+        width: 14
+        height: 31
+      spriteId: 61052d6724c8449f6bfd87bc8fa5e777
+    - name: TeacherScared_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 10
+        y: 0
+        width: 11
+        height: 31
+      spriteId: e6f24b91080584e6e9757d2efe3a0fca
+    - name: TeacherScared_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 10
+        y: 0
+        width: 11
+        height: 31
+      spriteId: 83a0959c8d5e3431a9ec678d0243b1d7
+    - name: TeacherScared_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 9
+        y: 0
+        width: 14
+        height: 31
+      spriteId: e08fb99502136446b8cdebe0a339939b
+    - name: TeacherScared_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 10
+        y: 0
+        width: 11
+        height: 31
+      spriteId: 95e835a17a17e40999ded627eefd3773
+    - name: TeacherScared_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 11
+        y: 0
+        width: 11
+        height: 31
+      spriteId: 4bb44df7bc87d427f95d0ddc3c987c4f
+    - name: TeacherScared_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 9
+        y: 0
+        width: 14
+        height: 31
+      spriteId: eb1a83601105944918f0f0df4211b15a
+    - name: TeacherScared_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 11
+        y: 0
+        width: 11
+        height: 31
+      spriteId: 11752e95a133648669464c7ade7af566
+    - name: TeacherScared_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 11
+        y: 0
+        width: 11
+        height: 31
+      spriteId: 15ec047638fb94414a984afc95af9d25
+    - name: TeacherScared_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 9
+        y: 0
+        width: 14
+        height: 31
+      spriteId: 8ba93cbe7e3fb450c9aa333761da7d0d
+    - name: TeacherScared_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 11
+        y: 0
+        width: 11
+        height: 31
+      spriteId: ad725a0e1dca044ac9f474fdca828ac7
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 32, y: 32}
