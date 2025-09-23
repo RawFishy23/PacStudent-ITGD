@@ -242,7 +242,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: InsideWall_2
+  - name: InsideWall_4
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
