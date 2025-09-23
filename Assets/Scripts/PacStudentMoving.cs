@@ -1,42 +1,60 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PacStudentMoving : MonoBehaviour
 {
-
-    public float moveSpeed = 2f; 
+    public float moveSpeed = 2f;
     public Vector3[] path;
-    public Animator animator; 
-    private int currentTarget = 0;
+    public Animator animator;
+    public AudioSource moveAudio;
 
-    // Start is called before the first frame update
+    private int currentTarget = 0;
+    private Vector3 startPos;
+    private float t = 0f;
+
     void Start()
     {
-        StartCoroutine(MoveAlongPath());
+        if (path.Length == 0) return;
+
+        startPos = transform.position;          
+        if (moveAudio != null) moveAudio.Play();
     }
 
-    IEnumerator MoveAlongPath()
+    void Update()
     {
-        while (true)
+        if (path.Length == 0) return;
+
+        Vector3 endPos = path[currentTarget];
+        float segmentLength = Vector3.Distance(startPos, endPos);
+
+        t += moveSpeed * Time.deltaTime / segmentLength;
+        t = Mathf.Clamp01(t);
+
+        transform.position = Vector3.Lerp(startPos, endPos, t);
+
+        Vector3 direction = (endPos - transform.position).normalized;
+        if (animator != null)
         {
-            Vector3 start = transform.position;
-            Vector3 end = path[currentTarget];
-            float distance = Vector3.Distance(start, end);
-            float duration = distance / moveSpeed;
-            float elapsed = 0f;
-
-            while (elapsed < duration)
+            if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))   
             {
-                elapsed += Time.deltaTime;
-                float t = Mathf.Clamp01(elapsed / duration);
-                transform.position = Vector3.Lerp(start, end, t);
-                yield return null;
+                if (direction.x > 0)
+                    animator.Play("Right");
+                else if (direction.x < 0)
+                    animator.Play("Left");
             }
+            else
+            {
+                if (direction.y > 0)
+                    animator.Play("Up");
+                else if (direction.y < 0)
+                    animator.Play("Down");
+            }
+        }
 
-            transform.position = end;
-
+        if (t >= 1f)
+        {
+            startPos = endPos;                        
             currentTarget = (currentTarget + 1) % path.Length;
+            t = 0f;                                   
         }
     }
 }
