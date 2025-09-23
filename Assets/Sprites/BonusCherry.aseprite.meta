@@ -1,8 +1,13 @@
 fileFormatVersion: 2
-guid: 71524c902b7c949dfa134ea3af08521a
+guid: 86ac55b36774f42f89abf68935fd0d21
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: BonusCoffee_Clip
+    second: {fileID: 7400000, guid: 2d6f06ea135be42a695c2e512d8b7325, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -97,7 +102,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638941785692620360
+  platformSettingsDirtyTick: 638942274088358440
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +126,78 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: NormalNotes
+  - name: BonusCherry_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: -0.6428572}
+    pivot: {x: 0.61538464, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 25
+      y: 34
+      width: 13
+      height: 18
+    spriteID: c99930e31b8184d0a9373a7cb3f5d5d4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 25, y: 34}
+  - name: BonusCherry_Frame_1
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.47368422}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 34
+      width: 13
+      height: 19
+    spriteID: c6732f51bee6941679af80ba65183b71
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 34}
+  - name: BonusCherry_Frame_2
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.45000002}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 46
+      y: 4
+      width: 13
+      height: 20
+    spriteID: d2d1506352d314e78b4b5b76d5563637
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 46, y: 4}
+  - name: BonusCherry_Frame_3
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.40909094}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 10
-      height: 14
-    spriteID: 311c8b168ce364893b93c862290d8eb4
+      width: 13
+      height: 22
+    spriteID: c9903e80f0ca94e74af4162a6992a985
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,23 +206,103 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: BonusCherry_Frame_4
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.40909094}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 25
+      y: 4
+      width: 13
+      height: 22
+    spriteID: 072c0eed8a98e4fec87401fc70f32be9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 25, y: 4}
+  - name: BonusCherry_Frame_5
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.5625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 46
+      y: 34
+      width: 13
+      height: 16
+    spriteID: b4b6083d36b16403dac3f5f48fccc41c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 46, y: 34}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 306378590
-    name: NormalNotes
+    guid: 729465552
+    name: BonusCherry
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: NormalNotes
+    - name: BonusCherry_Frame_0
       frameIndex: 0
       cellRect:
-        x: 11
+        x: 8
         y: 9
-        width: 10
-        height: 14
-      spriteId: 311c8b168ce364893b93c862290d8eb4
+        width: 13
+        height: 18
+      spriteId: c99930e31b8184d0a9373a7cb3f5d5d4
+    - name: BonusCherry_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 8
+        y: 9
+        width: 13
+        height: 19
+      spriteId: c6732f51bee6941679af80ba65183b71
+    - name: BonusCherry_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 8
+        y: 9
+        width: 13
+        height: 20
+      spriteId: d2d1506352d314e78b4b5b76d5563637
+    - name: BonusCherry_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 8
+        y: 9
+        width: 13
+        height: 22
+      spriteId: c9903e80f0ca94e74af4162a6992a985
+    - name: BonusCherry_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 8
+        y: 9
+        width: 13
+        height: 22
+      spriteId: 072c0eed8a98e4fec87401fc70f32be9
+    - name: BonusCherry_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 8
+        y: 9
+        width: 13
+        height: 16
+      spriteId: b4b6083d36b16403dac3f5f48fccc41c
     linkedCells: []
     parentIndex: -1
   platformSettings:
