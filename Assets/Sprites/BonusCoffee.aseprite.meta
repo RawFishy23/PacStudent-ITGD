@@ -80,7 +80,7 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
-    defaultPivotAlignment: 7
+    defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
     spritePadding: 0
@@ -93,7 +93,7 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
-    defaultPivotAlignment: 7
+    defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
     spritePadding: 0
@@ -102,7 +102,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638942274088358440
+  platformSettingsDirtyTick: 638942618178572070
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -126,9 +126,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: BonusCherry_Frame_0
+  - name: BonusCoffee_Frame_0
     originalName: 
-    pivot: {x: 0.61538464, y: -0.5}
+    pivot: {x: 0.61538464, y: 0.3888889}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -137,7 +137,7 @@ ScriptedImporter:
       y: 34
       width: 13
       height: 18
-    spriteID: c99930e31b8184d0a9373a7cb3f5d5d4
+    spriteID: 7fb23abb50a624f60af4a73838ee1715
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -146,9 +146,9 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 25, y: 34}
-  - name: BonusCherry_Frame_1
+  - name: BonusCoffee_Frame_1
     originalName: 
-    pivot: {x: 0.61538464, y: -0.47368422}
+    pivot: {x: 0.61538464, y: 0.36842105}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -157,7 +157,7 @@ ScriptedImporter:
       y: 34
       width: 13
       height: 19
-    spriteID: c6732f51bee6941679af80ba65183b71
+    spriteID: e03ca1d4813c24a088d0ab4c59fc91bc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -166,9 +166,9 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 34}
-  - name: BonusCherry_Frame_2
+  - name: BonusCoffee_Frame_2
     originalName: 
-    pivot: {x: 0.61538464, y: -0.45000002}
+    pivot: {x: 0.61538464, y: 0.35}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -177,7 +177,7 @@ ScriptedImporter:
       y: 4
       width: 13
       height: 20
-    spriteID: d2d1506352d314e78b4b5b76d5563637
+    spriteID: ebf998d96448840a0beadb6395728264
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -186,9 +186,9 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 46, y: 4}
-  - name: BonusCherry_Frame_3
+  - name: BonusCoffee_Frame_3
     originalName: 
-    pivot: {x: 0.61538464, y: -0.40909094}
+    pivot: {x: 0.61538464, y: 0.3181818}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -197,7 +197,7 @@ ScriptedImporter:
       y: 4
       width: 13
       height: 22
-    spriteID: c9903e80f0ca94e74af4162a6992a985
+    spriteID: 02c3b635a8dd14c61a337a7026d9cc83
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -206,9 +206,9 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: BonusCherry_Frame_4
+  - name: BonusCoffee_Frame_4
     originalName: 
-    pivot: {x: 0.61538464, y: -0.40909094}
+    pivot: {x: 0.61538464, y: 0.3181818}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -217,7 +217,7 @@ ScriptedImporter:
       y: 4
       width: 13
       height: 22
-    spriteID: 072c0eed8a98e4fec87401fc70f32be9
+    spriteID: 634afde03f17f4976895fc299900268c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -226,9 +226,9 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 25, y: 4}
-  - name: BonusCherry_Frame_5
+  - name: BonusCoffee_Frame_5
     originalName: 
-    pivot: {x: 0.61538464, y: -0.5625}
+    pivot: {x: 0.61538464, y: 0.4375}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -237,7 +237,7 @@ ScriptedImporter:
       y: 34
       width: 13
       height: 16
-    spriteID: b4b6083d36b16403dac3f5f48fccc41c
+    spriteID: f4a17b86e8665425d8dbaac6f799e321
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -249,60 +249,60 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 729465552
-    name: BonusCherry
+    guid: 266100125
+    name: BonusCoffee
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: BonusCherry_Frame_0
+    - name: BonusCoffee_Frame_0
       frameIndex: 0
       cellRect:
         x: 8
         y: 9
         width: 13
         height: 18
-      spriteId: c99930e31b8184d0a9373a7cb3f5d5d4
-    - name: BonusCherry_Frame_1
+      spriteId: 7fb23abb50a624f60af4a73838ee1715
+    - name: BonusCoffee_Frame_1
       frameIndex: 1
       cellRect:
         x: 8
         y: 9
         width: 13
         height: 19
-      spriteId: c6732f51bee6941679af80ba65183b71
-    - name: BonusCherry_Frame_2
+      spriteId: e03ca1d4813c24a088d0ab4c59fc91bc
+    - name: BonusCoffee_Frame_2
       frameIndex: 2
       cellRect:
         x: 8
         y: 9
         width: 13
         height: 20
-      spriteId: d2d1506352d314e78b4b5b76d5563637
-    - name: BonusCherry_Frame_3
+      spriteId: ebf998d96448840a0beadb6395728264
+    - name: BonusCoffee_Frame_3
       frameIndex: 3
       cellRect:
         x: 8
         y: 9
         width: 13
         height: 22
-      spriteId: c9903e80f0ca94e74af4162a6992a985
-    - name: BonusCherry_Frame_4
+      spriteId: 02c3b635a8dd14c61a337a7026d9cc83
+    - name: BonusCoffee_Frame_4
       frameIndex: 4
       cellRect:
         x: 8
         y: 9
         width: 13
         height: 22
-      spriteId: 072c0eed8a98e4fec87401fc70f32be9
-    - name: BonusCherry_Frame_5
+      spriteId: 634afde03f17f4976895fc299900268c
+    - name: BonusCoffee_Frame_5
       frameIndex: 5
       cellRect:
         x: 8
         y: 9
         width: 13
         height: 16
-      spriteId: b4b6083d36b16403dac3f5f48fccc41c
+      spriteId: f4a17b86e8665425d8dbaac6f799e321
     linkedCells: []
     parentIndex: -1
   platformSettings:

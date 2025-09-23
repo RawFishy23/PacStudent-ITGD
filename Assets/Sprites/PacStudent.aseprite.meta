@@ -100,7 +100,7 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
-    defaultPivotAlignment: 7
+    defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
     spritePadding: 0
@@ -113,7 +113,7 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
-    defaultPivotAlignment: 7
+    defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
     spritePadding: 0
@@ -122,7 +122,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638941828976064490
+  platformSettingsDirtyTick: 638942609630407130
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -148,7 +148,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: PacStudent_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -168,7 +168,7 @@ ScriptedImporter:
     uvTransform: {x: 40, y: 4}
   - name: PacStudent_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: -0.032258064}
+    pivot: {x: 0.5, y: 0.48387095}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -188,7 +188,7 @@ ScriptedImporter:
     uvTransform: {x: 72, y: 84}
   - name: PacStudent_Frame_2
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -208,7 +208,7 @@ ScriptedImporter:
     uvTransform: {x: 40, y: 44}
   - name: PacStudent_Frame_3
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -228,7 +228,7 @@ ScriptedImporter:
     uvTransform: {x: 40, y: 84}
   - name: PacStudent_Frame_4
     originalName: 
-    pivot: {x: 0.5, y: -0.032258064}
+    pivot: {x: 0.5, y: 0.48387095}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -248,7 +248,7 @@ ScriptedImporter:
     uvTransform: {x: 72, y: 123}
   - name: PacStudent_Frame_5
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -268,7 +268,7 @@ ScriptedImporter:
     uvTransform: {x: 40, y: 124}
   - name: PacStudent_Frame_7
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -288,7 +288,7 @@ ScriptedImporter:
     uvTransform: {x: 40, y: 164}
   - name: PacStudent_Frame_8
     originalName: 
-    pivot: {x: 0.5, y: -0.032258064}
+    pivot: {x: 0.5, y: 0.48387095}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -308,7 +308,7 @@ ScriptedImporter:
     uvTransform: {x: 72, y: 162}
   - name: PacStudent_Frame_9
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -328,7 +328,7 @@ ScriptedImporter:
     uvTransform: {x: 40, y: 204}
   - name: PacStudent_Frame_10
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -348,7 +348,7 @@ ScriptedImporter:
     uvTransform: {x: 72, y: 4}
   - name: PacStudent_Frame_11
     originalName: 
-    pivot: {x: 0.5, y: -0.032258064}
+    pivot: {x: 0.5, y: 0.48387095}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -368,7 +368,7 @@ ScriptedImporter:
     uvTransform: {x: 72, y: 201}
   - name: PacStudent_Frame_12
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -388,7 +388,7 @@ ScriptedImporter:
     uvTransform: {x: 72, y: 44}
   - name: PacStudent_Frame_13
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -408,7 +408,7 @@ ScriptedImporter:
     uvTransform: {x: 128, y: 43}
   - name: PacStudent_Frame_14
     originalName: 
-    pivot: {x: 0.4375, y: -0.032258064}
+    pivot: {x: 0.4375, y: 0.48387095}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -428,7 +428,7 @@ ScriptedImporter:
     uvTransform: {x: 104, y: 4}
   - name: PacStudent_Frame_15
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -448,7 +448,7 @@ ScriptedImporter:
     uvTransform: {x: 128, y: 83}
   - name: PacStudent_Frame_16
     originalName: 
-    pivot: {x: 0.4375, y: -0.032258064}
+    pivot: {x: 0.4375, y: 0.48387095}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -468,7 +468,7 @@ ScriptedImporter:
     uvTransform: {x: 104, y: 43}
   - name: PacStudent_Frame_17
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -488,7 +488,7 @@ ScriptedImporter:
     uvTransform: {x: 128, y: 123}
   - name: PacStudent_Frame_18
     originalName: 
-    pivot: {x: 0.4375, y: -0.032258064}
+    pivot: {x: 0.4375, y: 0.48387095}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -508,7 +508,7 @@ ScriptedImporter:
     uvTransform: {x: 104, y: 82}
   - name: PacStudent_Frame_19
     originalName: 
-    pivot: {x: 0.5625, y: -0.032258064}
+    pivot: {x: 0.5625, y: 0.48387095}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -528,7 +528,7 @@ ScriptedImporter:
     uvTransform: {x: 104, y: 121}
   - name: PacStudent_Frame_20
     originalName: 
-    pivot: {x: 0.5625, y: -0.032258064}
+    pivot: {x: 0.5625, y: 0.48387095}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -548,7 +548,7 @@ ScriptedImporter:
     uvTransform: {x: 104, y: 160}
   - name: PacStudent_Frame_21
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -568,7 +568,7 @@ ScriptedImporter:
     uvTransform: {x: 128, y: 163}
   - name: PacStudent_Frame_22
     originalName: 
-    pivot: {x: 0.5625, y: -0.032258064}
+    pivot: {x: 0.5625, y: 0.48387095}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -588,7 +588,7 @@ ScriptedImporter:
     uvTransform: {x: 104, y: 199}
   - name: PacStudent_Frame_23
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -608,7 +608,7 @@ ScriptedImporter:
     uvTransform: {x: 128, y: 203}
   - name: PacStudent_Frame_24
     originalName: 
-    pivot: {x: 0.5625, y: -0.032258064}
+    pivot: {x: 0.5625, y: 0.48387095}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -628,7 +628,7 @@ ScriptedImporter:
     uvTransform: {x: 128, y: 4}
   - name: PacStudent_Frame_25
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -648,7 +648,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: PacStudent_Frame_26
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -668,7 +668,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 44}
   - name: PacStudent_Frame_27
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -688,7 +688,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 84}
   - name: PacStudent_Frame_28
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -708,7 +708,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 124}
   - name: PacStudent_Frame_29
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -728,7 +728,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 164}
   - name: PacStudent_Frame_29
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
