@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "PacStudent.sln"
+    "dotnet.defaultSolution": "PacStudent-ITGD.sln"
 }
