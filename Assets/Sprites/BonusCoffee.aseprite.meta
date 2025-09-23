@@ -2,7 +2,12 @@ fileFormatVersion: 2
 guid: 86ac55b36774f42f89abf68935fd0d21
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: BonusCoffee_Clip
+    second: {fileID: 7400000, guid: 2d6f06ea135be42a695c2e512d8b7325, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -97,7 +102,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638941785692598800
+  platformSettingsDirtyTick: 638942274088358440
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -128,8 +133,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 4
+      x: 25
+      y: 34
       width: 13
       height: 18
     spriteID: cb30d6afebc62490a80fed5ccf77ecf7
@@ -140,7 +145,107 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    uvTransform: {x: 25, y: 34}
+  - name: BonusCoffee_Frame_1
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.47368422}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 34
+      width: 13
+      height: 19
+    spriteID: 1425896add3be43c28774f3619ce65f6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 34}
+  - name: BonusCoffee_Frame_2
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.45000002}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 46
+      y: 4
+      width: 13
+      height: 20
+    spriteID: 2ba33a5fc9626441197842464613d5dd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 46, y: 4}
+  - name: BonusCoffee_Frame_3
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.40909094}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 13
+      height: 22
+    spriteID: d5b70e9f25151470881194b3def70fa0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: BonusCoffee_Frame_4
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.40909094}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 25
+      y: 4
+      width: 13
+      height: 22
+    spriteID: 0b7eed82dce874969a82cb4926bdb3de
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 25, y: 4}
+  - name: BonusCoffee_Frame_5
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.5625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 46
+      y: 34
+      width: 13
+      height: 16
+    spriteID: 9ca64da3ff48c4614829a69539cd2d67
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 46, y: 34}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -150,7 +255,7 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: BonusCoffee
+    - name: BonusCoffee_Frame_0
       frameIndex: 0
       cellRect:
         x: 8
@@ -158,6 +263,46 @@ ScriptedImporter:
         width: 13
         height: 18
       spriteId: cb30d6afebc62490a80fed5ccf77ecf7
+    - name: BonusCoffee_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 8
+        y: 9
+        width: 13
+        height: 19
+      spriteId: 1425896add3be43c28774f3619ce65f6
+    - name: BonusCoffee_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 8
+        y: 9
+        width: 13
+        height: 20
+      spriteId: 2ba33a5fc9626441197842464613d5dd
+    - name: BonusCoffee_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 8
+        y: 9
+        width: 13
+        height: 22
+      spriteId: d5b70e9f25151470881194b3def70fa0
+    - name: BonusCoffee_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 8
+        y: 9
+        width: 13
+        height: 22
+      spriteId: 0b7eed82dce874969a82cb4926bdb3de
+    - name: BonusCoffee_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 8
+        y: 9
+        width: 13
+        height: 16
+      spriteId: 9ca64da3ff48c4614829a69539cd2d67
     linkedCells: []
     parentIndex: -1
   platformSettings:
