@@ -222,9 +222,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   path:
-  - {x: -8.55, y: 13.51, z: 0}
-  - {x: -3.51, y: 13.51, z: 0}
-  - {x: -3.51, y: 17.53, z: 0}
-  - {x: -8.47, y: 17.53, z: 0}
+  - {x: 6, y: -1, z: 0}
+  - {x: 6, y: -5, z: 0}
+  - {x: 1, y: -5, z: 0}
+  - {x: 1, y: -1, z: 0}
   animator: {fileID: 53828775941604673}
   moveAudio: {fileID: 8176695402241251713}

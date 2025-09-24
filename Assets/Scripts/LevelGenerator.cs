@@ -29,7 +29,7 @@ public class LevelGenerator : MonoBehaviour
         GenerateFullLevel();
     }
 
-    int[,] BuildFullMap(int[,] quadrant)
+    int[,] FullLevelArray(int[,] quadrant)
     {
         int rows = quadrant.GetLength(0);
         int cols = quadrant.GetLength(1);
@@ -60,7 +60,7 @@ public class LevelGenerator : MonoBehaviour
         foreach (Transform child in levelContainer)
             Destroy(child.gameObject);
 
-        int[,] fullMap = BuildFullMap(levelMap);
+        int[,] fullMap = FullLevelArray(levelMap);
         int rows = fullMap.GetLength(0);
         int cols = fullMap.GetLength(1);
 
@@ -85,6 +85,24 @@ public class LevelGenerator : MonoBehaviour
 
                 tile.transform.localScale = scale;
                 tile.transform.rotation = Quaternion.Euler(0, 0, rotation);
+            }
+        }
+
+        Camera cam = Camera.main;
+        if (cam != null)
+        {
+            Vector3 center = new Vector3(cols / 2f - 0.5f, -rows / 2f + 0.5f, -10f);
+            cam.transform.position = center;
+
+            float screenRatio = (float)Screen.width / Screen.height;
+            float targetRatio = (float)cols / rows;
+
+            if (screenRatio >= targetRatio)
+                cam.orthographicSize = rows / 2f + 0.5f;
+            else
+            {
+                float differenceInSize = targetRatio / screenRatio;
+                cam.orthographicSize = rows / 2f * differenceInSize + 0.5f;
             }
         }
     }
