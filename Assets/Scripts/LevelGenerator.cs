@@ -3,6 +3,7 @@ using UnityEngine;
 public class LevelGenerator : MonoBehaviour
 {
     public GameObject[] tilePrefabs;
+    public GameObject powerPelletPrefab;
     public Transform levelContainer;
 
     public int[,] levelMap =
@@ -85,6 +86,11 @@ public class LevelGenerator : MonoBehaviour
 
                 tile.transform.localScale = scale;
                 tile.transform.rotation = Quaternion.Euler(0, 0, rotation);
+
+                if (tileID == 6)
+                {
+                    GameObject pellet = Instantiate(powerPelletPrefab, pos + Vector3.back * 0.1f, Quaternion.identity, tile.transform);
+                }
             }
         }
 

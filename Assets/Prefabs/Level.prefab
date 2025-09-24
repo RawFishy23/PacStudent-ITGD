@@ -15398,7 +15398,7 @@ GameObject:
   - component: {fileID: 6626120077433473945}
   - component: {fileID: 4625236452397031506}
   m_Layer: 0
-  m_Name: PowerPelletAnimator (1)
+  m_Name: PowerPellet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15413,11 +15413,11 @@ Transform:
   m_GameObject: {fileID: 1317171493109224808}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.48, y: 15.51, z: -5}
+  m_LocalPosition: {x: -14.919912, y: 8.351952, z: -2.7257798}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2012063188255007755}
+  m_Father: {fileID: 3904725134820000654}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6626120077433473945
 SpriteRenderer:
@@ -15526,10 +15526,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4943861942256213671}
-  - {fileID: 8500369493470398375}
-  - {fileID: 9150412425536480931}
-  - {fileID: 117279007636006084}
-  - {fileID: 7923036150532228688}
+  - {fileID: 3904725134820000654}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!156049354 &6701657333383233939
@@ -15556,7 +15553,7 @@ GameObject:
   - component: {fileID: 1241129003566669508}
   - component: {fileID: 6502666941817844219}
   m_Layer: 0
-  m_Name: PowerPelletAnimator (2)
+  m_Name: PowerPellet (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15571,11 +15568,11 @@ Transform:
   m_GameObject: {fileID: 4463649178386274339}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.51, y: 15.51, z: -5}
+  m_LocalPosition: {x: 10.070087, y: 8.351952, z: -2.7257798}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2012063188255007755}
+  m_Father: {fileID: 3904725134820000654}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1241129003566669508
 SpriteRenderer:
@@ -15665,7 +15662,7 @@ GameObject:
   - component: {fileID: 5895051426776601049}
   - component: {fileID: 1570787558499516303}
   m_Layer: 0
-  m_Name: PowerPelletAnimator (3)
+  m_Name: PowerPellet (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15680,11 +15677,11 @@ Transform:
   m_GameObject: {fileID: 6763063226815836141}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.5, y: -6.5, z: -5}
+  m_LocalPosition: {x: -14.939913, y: -13.658049, z: -2.7257798}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2012063188255007755}
+  m_Father: {fileID: 3904725134820000654}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5895051426776601049
 SpriteRenderer:
@@ -15774,7 +15771,7 @@ GameObject:
   - component: {fileID: 7757402988984596415}
   - component: {fileID: 5690948564317941720}
   m_Layer: 0
-  m_Name: PowerPelletAnimator (4)
+  m_Name: PowerPellet (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15789,11 +15786,11 @@ Transform:
   m_GameObject: {fileID: 7197587307723936057}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.5, y: -6.48, z: -5}
+  m_LocalPosition: {x: 10.060087, y: -13.638049, z: -2.7257798}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2012063188255007755}
+  m_Father: {fileID: 3904725134820000654}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7757402988984596415
 SpriteRenderer:
@@ -15871,3 +15868,38 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &9134077470451501071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3904725134820000654}
+  m_Layer: 0
+  m_Name: PowerPellets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3904725134820000654
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9134077470451501071}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.4399123, y: 7.158049, z: -2.2742202}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8500369493470398375}
+  - {fileID: 9150412425536480931}
+  - {fileID: 117279007636006084}
+  - {fileID: 7923036150532228688}
+  m_Father: {fileID: 2012063188255007755}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
