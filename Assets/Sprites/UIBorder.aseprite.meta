@@ -8,6 +8,11 @@ ScriptedImporter:
       assembly: UnityEngine.AnimationModule
       name: Button_Clip
     second: {fileID: 7400000, guid: 4418a9f3515f545d39363b6d30f53e0f, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: UIBorder_Clip
+    second: {fileID: 7400000, guid: 6c251a7a24928458096e99ac8da9ee74, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -84,7 +89,7 @@ ScriptedImporter:
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 0
     spritePadding: 0
-    generateModelPrefab: 0
+    generateModelPrefab: 1
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
@@ -97,12 +102,12 @@ ScriptedImporter:
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 0
     spritePadding: 0
-    generateModelPrefab: 0
+    generateModelPrefab: 1
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638970928471726830
+  platformSettingsDirtyTick: 638973607493736710
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -126,7 +131,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Button
+  - name: UIBorder_Frame_0
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -137,7 +142,7 @@ ScriptedImporter:
       y: 0
       width: 32
       height: 32
-    spriteID: 496ac1cf2eff3493e92fb74790146e3d
+    spriteID: 17d7c8706527345f2a386473495519a0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -146,7 +151,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Button_Frame_1
+  - name: UIBorder_Frame_1
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -157,7 +162,7 @@ ScriptedImporter:
       y: 32
       width: 32
       height: 32
-    spriteID: 4b669591b02884eb2bb02a54df497110
+    spriteID: bee4f777e2ae74dae85c43f2dac0f494
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -169,28 +174,28 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1253176790
-    name: Button
+    guid: 1334157270
+    name: UIBorder
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Button_Frame_0
+    - name: UIBorder_Frame_0
       frameIndex: 0
       cellRect:
         x: 0
         y: 0
         width: 32
         height: 32
-      spriteId: 496ac1cf2eff3493e92fb74790146e3d
-    - name: Button_Frame_1
+      spriteId: 17d7c8706527345f2a386473495519a0
+    - name: UIBorder_Frame_1
       frameIndex: 1
       cellRect:
         x: 0
         y: 0
         width: 32
         height: 32
-      spriteId: 4b669591b02884eb2bb02a54df497110
+      spriteId: bee4f777e2ae74dae85c43f2dac0f494
     linkedCells: []
     parentIndex: -1
   platformSettings:

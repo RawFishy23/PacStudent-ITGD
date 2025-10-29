@@ -2,7 +2,12 @@ fileFormatVersion: 2
 guid: 1b2b0585900524b1c9be546aa1d43246
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: MenuBorder_Clip
+    second: {fileID: 7400000, guid: b033e128073734572b4034918ac3a56b, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -97,7 +102,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638970387399338350
+  platformSettingsDirtyTick: 638973692141668620
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -141,6 +146,26 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: MenuBorder_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 32, y: 32, z: 32, w: 32}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 108
+      width: 96
+      height: 96
+    spriteID: 21631a124de2e4cdc83f5e3208919eef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 108}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -150,7 +175,7 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: MenuBorder
+    - name: MenuBorder_Frame_0
       frameIndex: 0
       cellRect:
         x: 0
@@ -158,6 +183,14 @@ ScriptedImporter:
         width: 96
         height: 96
       spriteId: f4204f76bcf494a73b13cff45043a34c
+    - name: MenuBorder_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 0
+        y: 0
+        width: 96
+        height: 96
+      spriteId: 21631a124de2e4cdc83f5e3208919eef
     linkedCells: []
     parentIndex: -1
   platformSettings:
