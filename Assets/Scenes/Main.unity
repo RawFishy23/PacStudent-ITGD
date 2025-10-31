@@ -664,6 +664,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!82 &611851149 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6649991152602053173, guid: eac1c44f8f8104877b21abfb7c1263f0, type: 3}
+  m_PrefabInstance: {fileID: 7043165274587274724}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &631315244
 GameObject:
   m_ObjectHideFlags: 0
@@ -13385,10 +13390,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ghostAnimators: []
-  backgroundMusic: {fileID: 0}
-  normalMusic: {fileID: 0}
-  scaredMusic: {fileID: 0}
-  deadMusic: {fileID: 0}
+  backgroundMusic: {fileID: 611851149}
+  normalMusic: {fileID: 8300000, guid: 9ced0a5b7035849eca187276a2c99900, type: 3}
+  scaredMusic: {fileID: 8300000, guid: 18e46ba080c90435386fe5dccb73d82f, type: 3}
+  deadMusic: {fileID: 8300000, guid: de58f43eae2aa433bb7f9fdaf48560c2, type: 3}
 --- !u!1 &1615481940
 GameObject:
   m_ObjectHideFlags: 0
@@ -43469,7 +43474,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8743562518540792350, guid: 899ca746c619e4ec58f0104ec3085c4a, type: 3}
-      insertIndex: -1
+      insertIndex: 1
       addedObject: {fileID: 264742329}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 899ca746c619e4ec58f0104ec3085c4a, type: 3}
@@ -43611,6 +43616,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 371343570048456956, guid: eac1c44f8f8104877b21abfb7c1263f0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5044723037694000840, guid: eac1c44f8f8104877b21abfb7c1263f0, type: 3}
       propertyPath: walkClip
       value: 
@@ -43629,7 +43638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5044723037694000840, guid: eac1c44f8f8104877b21abfb7c1263f0, type: 3}
       propertyPath: audioPlayerOrder.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5044723037694000840, guid: eac1c44f8f8104877b21abfb7c1263f0, type: 3}
       propertyPath: 'audioPlayerOrder.Array.data[0]'

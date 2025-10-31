@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     private bool gameRunning = false;
     private float ghostTimer = 0f;
 
-    public bool allowInput = false; // Checked by PacStudentController
+    public bool allowInput = false;
 
     private void Awake()
     {
@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        StartGame(); // Automatically start countdown when scene loads
+        StartGame();  
     }
 
     private void Update()
@@ -97,11 +97,9 @@ public class GameManager : MonoBehaviour
         
         yield return new WaitForSeconds(1f);
 
-        // Hide UI
         if (roundCountdownText != null) roundCountdownText.gameObject.SetActive(false);
         if (blockerImage) blockerImage.gameObject.SetActive(false);
 
-        // Start game
         gameRunning = true;
         allowInput = true;
 
@@ -146,7 +144,7 @@ public class GameManager : MonoBehaviour
         {
             int minutes = Mathf.FloorToInt(timer / 60);
             int seconds = Mathf.FloorToInt(timer % 60);
-            int milliseconds = Mathf.FloorToInt((timer * 100) % 100); 
+            int milliseconds = Mathf.FloorToInt((timer * 100) % 100);
             timerText.text = $"{minutes:00}:{seconds:00}:{milliseconds:00}";
         }
     }
@@ -158,6 +156,28 @@ public class GameManager : MonoBehaviour
         gameRunning = false;
         allowInput = false;
         Debug.Log("Game Over!");
+
+        SaveHighScore();
+    }
+
+    private void SaveHighScore()
+    {
+        int previousHigh = PlayerPrefs.GetInt("HighScore", 0);
+
+        if (score > previousHigh)
+        {
+            PlayerPrefs.SetInt("HighScore", score);
+
+            int minutes = Mathf.FloorToInt(timer / 60f);
+            int seconds = Mathf.FloorToInt(timer % 60f);
+            int milliseconds = Mathf.FloorToInt((timer * 100) % 100);
+
+            string formattedTime = $"{minutes:00}:{seconds:00}:{milliseconds:00}";
+            PlayerPrefs.SetString("HighScoreTime", formattedTime);
+
+            PlayerPrefs.Save();
+            Debug.Log($"New High Score Saved: {score} ({formattedTime})");
+        }
     }
 
     #region Ghost Timer

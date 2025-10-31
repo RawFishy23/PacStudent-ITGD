@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
-{    
+{
     public void MoveToScene(int SceneID)
     {
         SceneManager.LoadScene(SceneID);
