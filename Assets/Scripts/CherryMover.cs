@@ -29,7 +29,7 @@ public class CherryMover : MonoBehaviour
         if (other.CompareTag("Player")) 
         {
             controller.NotifyCherryDestroyed();
-
+            GameManager.Instance.CollectBonus(100);
             Destroy(gameObject);
         }
     }
