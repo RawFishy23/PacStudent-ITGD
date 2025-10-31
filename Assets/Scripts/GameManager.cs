@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.SceneManagement;
+using System.Collections;
 using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
@@ -12,27 +12,36 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI timerText;
     public List<Image> lifeImages;
-    public TextMeshProUGUI ghostTimerText; 
-    
+    public TextMeshProUGUI ghostTimerText;
+
+    [Header("Round Start Countdown")]
+    public int countdownTime;
+    public TextMeshProUGUI roundCountdownText;
+    public Image blockerImage;
+
     [Header("Game Settings")]
-    public int lives = 3;
     private int score = 0;
     private float timer = 0f;
     private bool gameRunning = false;
     private float ghostTimer = 0f;
 
+    public bool allowInput = false; // Checked by PacStudentController
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Start()
+    {
+        StartGame(); // Automatically start countdown when scene loads
     }
 
     private void Update()
@@ -42,17 +51,66 @@ public class GameManager : MonoBehaviour
             timer += Time.deltaTime;
             UpdateTimerUI();
         }
+
+        if (ghostTimer > 0)
+        {
+            ghostTimer -= Time.deltaTime;
+            if (ghostTimer <= 0)
+            {
+                ghostTimer = 0;
+                ghostTimerText.gameObject.SetActive(false);
+            }
+        }
     }
+
+    #region Game Flow
 
     public void StartGame()
     {
         score = 0;
-        lives = lifeImages.Count; 
-        timer = 0;
-        gameRunning = true;
+        timer = 0f;
+        gameRunning = false;
+        allowInput = false;
+
         UpdateScoreUI();
-        UpdateLivesUI();
+
+        foreach (var heart in lifeImages)
+            heart.enabled = true;
+
+        StartCoroutine(RoundCountdownCoroutine());
     }
+
+    private IEnumerator RoundCountdownCoroutine()
+    {
+        while (countdownTime > 0)
+        {
+            roundCountdownText.text = countdownTime.ToString();
+            if (blockerImage != null) blockerImage.gameObject.SetActive(true);
+            if (roundCountdownText) roundCountdownText.gameObject.SetActive(true);
+
+            yield return new WaitForSeconds(1f);
+
+            countdownTime--;
+        }
+
+        roundCountdownText.text = "GO!";
+        
+        yield return new WaitForSeconds(1f);
+
+        // Hide UI
+        if (roundCountdownText != null) roundCountdownText.gameObject.SetActive(false);
+        if (blockerImage) blockerImage.gameObject.SetActive(false);
+
+        // Start game
+        gameRunning = true;
+        allowInput = true;
+
+        Debug.Log("Countdown finished! Game started.");
+    }
+
+    #endregion
+
+    #region Score & Lives
 
     public void AddScore(int amount)
     {
@@ -62,71 +120,56 @@ public class GameManager : MonoBehaviour
 
     public void LoseLife()
     {
-        lives = Mathf.Max(0, lives - 1);
-        UpdateLivesUI();
-
-        if (lives <= 0)
+        for (int i = lifeImages.Count - 1; i >= 0; i--)
         {
-            GameOver();
+            if (lifeImages[i].enabled)
+            {
+                lifeImages[i].enabled = false;
+                if (i == 0) GameOver();
+                break;
+            }
         }
     }
 
+    #endregion
+
+    #region UI Updates
+
     private void UpdateScoreUI()
     {
-        if (scoreText != null)
-            scoreText.text = score.ToString("D6");
+        if (scoreText) scoreText.text = score.ToString("D6");
     }
 
     private void UpdateTimerUI()
     {
-        if (timerText != null)
+        if (timerText)
         {
             int minutes = Mathf.FloorToInt(timer / 60);
             int seconds = Mathf.FloorToInt(timer % 60);
-            timerText.text = $"{minutes:00}:{seconds:00}";
+            int milliseconds = Mathf.FloorToInt((timer * 100) % 100); 
+            timerText.text = $"{minutes:00}:{seconds:00}:{milliseconds:00}";
         }
     }
 
-    private void UpdateLivesUI()
-    {
-        for (int i = 0; i < lifeImages.Count; i++)
-        {
-            lifeImages[i].enabled = i < lives;
-        }
-    }
+    #endregion
 
     private void GameOver()
     {
         gameRunning = false;
+        allowInput = false;
         Debug.Log("Game Over!");
     }
 
-    public void CollectPellet(int points)
-    {
-        score += points;
-        UpdateScoreUI();
-    }
+    #region Ghost Timer
 
-    public void CollectPowerPellet(int points)
-    {
-        score += points;
-        UpdateScoreUI();
-    }
-
-    public void CollectBonus(int points)
-    {
-        score += points;
-        UpdateScoreUI();
-    }
-
-        public void StartGhostTimer(float duration)
+    public void StartGhostTimer(float duration)
     {
         ghostTimer = duration;
-        ghostTimerText.gameObject.SetActive(true);
+        if (ghostTimerText != null)
+            ghostTimerText.gameObject.SetActive(true);
     }
 
-    public float GetRemainingGhostTime()
-    {
-        return ghostTimer;
-    }
+    public float GetRemainingGhostTime() => ghostTimer;
+
+    #endregion
 }

@@ -19,7 +19,7 @@ public class PacStudentController : MonoBehaviour
     // Movement
     private Vector3Int gridPosition;
     private Vector3 targetWorldPos;
-    public bool isMoving = false;
+    public static bool isMoving = false;
 
     // Animation
     private Animator animator;
@@ -47,6 +47,12 @@ public class PacStudentController : MonoBehaviour
 
     void Update()
     {
+        if (!GameManager.Instance.allowInput)
+        {
+            animator.SetBool("isMoving", false);
+            return;
+        }
+
         GatherInput();
 
         if (isMoving)
@@ -158,13 +164,13 @@ public class PacStudentController : MonoBehaviour
         if (tile == pelletTile)
         {
             levelTilemap.SetTile(gridPosition, null);
-            GameManager.Instance.CollectPellet(10);
+            GameManager.Instance.AddScore(10);
             audioController?.PlayPelletEat();
         }
         else if (tile == powerPelletTile)
         {
             levelTilemap.SetTile(gridPosition, null);
-            GameManager.Instance.CollectPowerPellet(50);
+            GameManager.Instance.AddScore(50);
             audioController?.PlayPelletEat();
 
             GhostManager.Instance.EnterScaredMode();

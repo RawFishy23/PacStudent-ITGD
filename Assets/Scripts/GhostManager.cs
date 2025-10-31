@@ -70,7 +70,7 @@ public class GhostManager : MonoBehaviour
         ghostAnimator.SetBool("Scared", false);
         ghostAnimator.SetBool("Recovering", false);
 
-        GameManager.Instance.CollectPellet(300); 
+        GameManager.Instance.AddScore(300); 
         backgroundMusic.clip = deadMusic;
         backgroundMusic.Play();
 
