@@ -10,14 +10,12 @@ public class ParticleController : MonoBehaviour
 
     private Vector3Int? lastWallHitTile = null;
 
-    // Play/stop movement particles
     public void PlayMove(bool isMoving, Vector2Int moveDir)
     {
         if (dustParticle == null) return;
 
         if (isMoving)
         {
-            // Rotate the particle according to move direction
             Quaternion rot = Quaternion.identity;
             if (moveDir == Vector2Int.up) rot = Quaternion.Euler(90, 0, 0);
             else if (moveDir == Vector2Int.down) rot = Quaternion.Euler(-90, 0, 0);
@@ -34,7 +32,6 @@ public class ParticleController : MonoBehaviour
         }
     }
 
-    // Spawn wall hit prefab once per tile
     public void PlayWallHit(Vector3Int wallTilePos, Vector3 spawnPos)
     {
         if (lastWallHitTile != null && lastWallHitTile == wallTilePos) return;

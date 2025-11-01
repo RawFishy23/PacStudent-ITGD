@@ -11,25 +11,25 @@ public class GhostController : MonoBehaviour
     public Tilemap levelTilemap;
     public TileBase[] wallTiles;
     public Transform pacStudent;
-    public Vector3Int spawnCell;
+    public Vector3Int spawnCell; 
     public Vector3Int leftTunnelCell;
     public Vector3Int rightTunnelCell;
 
     [Header("Spawn/Exit Settings")]
-    public Vector3Int topExitCell;
-    public Vector3Int bottomExitCell;
+    public Vector3Int topExitCell;             
+    public Vector3Int bottomExitCell;          
 
     [Header("Settings")]
-    public float normalSpeed = 4.5f;
-    public float scaredSpeed = 2.25f;
-    public float deadSpeed = 2.25f;
+    public float normalSpeed = 4.5f;  
+    public float scaredSpeed = 2.25f; 
+    public float deadSpeed = 2.25f;   
     public int ghostNumber = 1;
-    public float scaredTimer = 10f;
+    public float scaredTimer = 10f; 
+    public bool canMove = false; 
 
     private bool inSpawnArea = true;
     private GhostState currentState = GhostState.Normal;
 
-    // Movement
     private Vector3Int gridPosition;
     private Vector3Int lastGridPosition;
     private Vector3Int targetCell;
@@ -51,6 +51,8 @@ public class GhostController : MonoBehaviour
 
     void Update()
     {
+        if (!canMove) return; 
+
         if (currentState == GhostState.Dead)
         {
             HandleDeadMovement();
@@ -58,27 +60,22 @@ public class GhostController : MonoBehaviour
             return;
         }
 
-        // Scared timer countdown
         if (currentState == GhostState.Scared)
         {
             scaredTimer -= Time.deltaTime;
             if (scaredTimer <= 0f)
             {
                 SetState(GhostState.Normal);
-                if (AudioPlayer.Instance != null)
-                    AudioPlayer.Instance.SwitchState(BGMState.Normal);
             }
         }
 
-        // PacStudent collision
         if (Vector3.Distance(transform.position, pacStudent.position) < 0.45f)
         {
             if (currentState == GhostState.Scared)
             {
                 GameManager.Instance.AddScore(300);
                 SetState(GhostState.Dead);
-                if (AudioPlayer.Instance != null)
-                    AudioPlayer.Instance.SwitchState(BGMState.Dead);
+                AudioPlayer.Instance.SwitchState(BGMState.Dead); 
             }
             else if (currentState == GhostState.Normal)
             {
@@ -87,7 +84,10 @@ public class GhostController : MonoBehaviour
         }
 
         float speed = GetSpeedByState();
-        if (!isMoving) DecideNextMove();
+
+        if (!isMoving)
+            DecideNextMove();
+
         MoveLerp(speed);
         UpdateAnimator();
     }
@@ -116,7 +116,9 @@ public class GhostController : MonoBehaviour
         }
 
         if (inSpawnArea && (gridPosition == topExitCell || gridPosition == bottomExitCell))
+        {
             inSpawnArea = false;
+        }
     }
 
     private void DecideNextMove()
@@ -127,10 +129,7 @@ public class GhostController : MonoBehaviour
             Vector3Int next = gridPosition + outDir;
             if (IsWalkable(next))
             {
-                targetCell = next;
-                targetWorldPos = levelTilemap.GetCellCenterWorld(next);
-                isMoving = true;
-                lastGridPosition = gridPosition;
+                SetTargetCell(next);
                 return;
             }
         }
@@ -138,10 +137,7 @@ public class GhostController : MonoBehaviour
         if (inSpawnArea && currentState != GhostState.Dead)
         {
             Vector3Int exitCell = (ghostNumber == 1 || ghostNumber == 3) ? topExitCell : bottomExitCell;
-            targetCell = exitCell;
-            targetWorldPos = levelTilemap.GetCellCenterWorld(exitCell);
-            isMoving = true;
-            lastGridPosition = gridPosition;
+            SetTargetCell(exitCell);
             return;
         }
 
@@ -159,11 +155,11 @@ public class GhostController : MonoBehaviour
             foreach (var dir in directions)
             {
                 Vector3Int nextCell = gridPosition + dir;
-                if (IsWalkable(nextCell)) possibleMoves.Add(nextCell);
+                if (IsWalkable(nextCell))
+                    possibleMoves.Add(nextCell);
             }
         }
 
-        // Pick next cell based on ghost behavior
         targetCell = possibleMoves[0];
         switch (ghostNumber)
         {
@@ -174,6 +170,14 @@ public class GhostController : MonoBehaviour
         }
 
         targetWorldPos = levelTilemap.GetCellCenterWorld(targetCell);
+        isMoving = true;
+        lastGridPosition = gridPosition;
+    }
+
+    private void SetTargetCell(Vector3Int cell)
+    {
+        targetCell = cell;
+        targetWorldPos = levelTilemap.GetCellCenterWorld(cell);
         isMoving = true;
         lastGridPosition = gridPosition;
     }
@@ -196,17 +200,11 @@ public class GhostController : MonoBehaviour
         Vector3 pacPos = pacStudent.position;
         Vector3Int best = moves[0];
         float minDist = Vector3.Distance(levelTilemap.GetCellCenterWorld(best), pacPos);
-
         foreach (var m in moves)
         {
             float d = Vector3.Distance(levelTilemap.GetCellCenterWorld(m), pacPos);
-            if (d <= minDist)
-            {
-                minDist = d;  
-                best = m;     
-            }
+            if (d <= minDist) { minDist = d; best = m; }
         }
-
         return best;
     }
 
@@ -217,23 +215,37 @@ public class GhostController : MonoBehaviour
 
     private Vector3Int SelectMoveForGhost4(List<Vector3Int> moves)
     {
-        Vector3Int clockwise = new Vector3Int[] { Vector3Int.up, Vector3Int.right, Vector3Int.down, Vector3Int.left }[Random.Range(0, 4)];
-        Vector3Int candidate = gridPosition + clockwise;
+        Vector3Int[] clockwise = { Vector3Int.up, Vector3Int.right, Vector3Int.down, Vector3Int.left };
+        Vector3Int candidate = gridPosition + clockwise[Random.Range(0, 4)];
         if (IsWalkable(candidate)) return candidate;
         return moves[Random.Range(0, moves.Count)];
     }
 
-    private bool IsWalkable(Vector3Int cell)
+private bool IsWalkable(Vector3Int cell)
+{
+    if (currentState != GhostState.Dead)
     {
-        if (currentState != GhostState.Dead && (cell == leftTunnelCell || cell == rightTunnelCell)) return false;
+        if (cell == leftTunnelCell || cell == rightTunnelCell)
+            return false;
+        
+        if (inSpawnArea == false && IsInsideSpawnDoor(cell))
+            return false;
+    }
 
-        TileBase tile = levelTilemap.GetTile(cell);
-        if (tile == null) return true;
+    TileBase tile = levelTilemap.GetTile(cell);
+    if (tile == null) return true;
 
-        foreach (var wall in wallTiles)
-            if (tile == wall) return false;
+    foreach (var wall in wallTiles)
+    {
+        if (tile == wall) return false;
+    }
 
-        return true;
+    return true;
+}
+
+    private bool IsInsideSpawnDoor(Vector3Int cell)
+    {
+        return cell == topExitCell || cell == bottomExitCell;
     }
 
     private void UpdateAnimator()
@@ -255,11 +267,14 @@ public class GhostController : MonoBehaviour
         if (newState == GhostState.Scared)
         {
             scaredTimer = duration;
-            if (GameManager.Instance != null)
-                GameManager.Instance.StartGhostTimer(duration);
-
-            if (AudioPlayer.Instance != null)
-                AudioPlayer.Instance.SwitchState(BGMState.Scared);
+            GameManager.Instance.StartGhostTimer(duration);
+        }
+        else if (newState == GhostState.Dead)
+        {
+            targetCell = spawnCell;
+            targetWorldPos = levelTilemap.GetCellCenterWorld(spawnCell);
+            lastGridPosition = gridPosition; 
+            isMoving = true;
         }
     }
 
@@ -270,7 +285,9 @@ public class GhostController : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, spawnWorldPos, step);
 
         if (Vector3.Distance(transform.position, spawnWorldPos) < 0.01f)
+        {
             RespawnGhost();
+        }
     }
 
     private void RespawnGhost()
@@ -279,9 +296,35 @@ public class GhostController : MonoBehaviour
         inSpawnArea = true;
         gridPosition = spawnCell;
         transform.position = levelTilemap.GetCellCenterWorld(spawnCell);
+        AudioPlayer.Instance.SwitchState(BGMState.Normal);
+    }
 
-        // Ensure normal BGM resumes if no ghosts are scared
-        if (AudioPlayer.Instance != null)
-            AudioPlayer.Instance.SwitchState(BGMState.Normal);
+    public void TeleportToSpawn()
+    {
+        currentState = GhostState.Normal;
+        inSpawnArea = true;
+        isMoving = false;
+        gridPosition = spawnCell;
+        targetCell = spawnCell;
+        targetWorldPos = levelTilemap.GetCellCenterWorld(spawnCell);
+        transform.position = targetWorldPos;
+    }
+
+    public void StopAndTeleportToSpawn()
+    {
+        canMove = false;
+        isMoving = false;
+        gridPosition = spawnCell;
+        targetCell = spawnCell;
+        targetWorldPos = levelTilemap.GetCellCenterWorld(spawnCell);
+        transform.position = targetWorldPos;
+        lastGridPosition = spawnCell;
+        currentState = GhostState.Normal;
+        animator.SetInteger("State", (int)currentState);
+    }
+
+    public void ResumeMovement()
+    {
+        canMove = true;
     }
 }

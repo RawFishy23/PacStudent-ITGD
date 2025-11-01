@@ -14,10 +14,17 @@ public class GameManager : MonoBehaviour
     public List<Image> lifeImages;
     public TextMeshProUGUI ghostTimerText;
 
+
     [Header("Round Start Countdown")]
     public int countdownTime;
     public TextMeshProUGUI roundCountdownText;
+    public Image startBlockerImage;
+
+    [Header("Game Over UI")]
+    public TextMeshProUGUI gameOverText;
     public Image blockerImage;
+    public string mainMenuSceneName = "StartScene";
+
 
     [Header("Game Settings")]
     private int score = 0;
@@ -64,7 +71,7 @@ public class GameManager : MonoBehaviour
             else
             {
                 if (ghostTimerText != null)
-                    ghostTimerText.text = Mathf.Ceil(ghostTimer).ToString(); // <--- update UI
+                    ghostTimerText.text = Mathf.Ceil(ghostTimer).ToString(); 
             }
         }
     }
@@ -100,7 +107,7 @@ public class GameManager : MonoBehaviour
         }
 
         roundCountdownText.text = "GO!";
-        
+
         yield return new WaitForSeconds(1f);
 
         if (roundCountdownText != null) roundCountdownText.gameObject.SetActive(false);
@@ -108,6 +115,12 @@ public class GameManager : MonoBehaviour
 
         gameRunning = true;
         allowInput = true;
+
+        GhostController[] ghosts = FindObjectsOfType<GhostController>();
+        foreach (var ghost in ghosts)
+        {
+            ghost.canMove = true;
+        }
 
         Debug.Log("Countdown finished! Game started.");
     }
@@ -157,13 +170,24 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
-    private void GameOver()
+    public void GameOver()
     {
         gameRunning = false;
         allowInput = false;
-        Debug.Log("Game Over!");
 
         SaveHighScore();
+
+        if (gameOverText != null) gameOverText.gameObject.SetActive(true);
+        if (blockerImage != null) blockerImage.gameObject.SetActive(true);
+
+        StartCoroutine(GameOverCoroutine());
+    }
+
+    private IEnumerator GameOverCoroutine()
+    {
+        yield return new WaitForSeconds(3f);
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene(mainMenuSceneName);
     }
 
     private void SaveHighScore()

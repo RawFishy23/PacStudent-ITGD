@@ -42,17 +42,13 @@ public class AudioPlayer : MonoBehaviour
 
     private IEnumerator CheckIntroFinished()
     {
-        // Wait until intro finishes
         yield return new WaitForSeconds(introClip.length);
         SwitchState(BGMState.Normal);
     }
 
-    /// <summary>
-    /// Call this to change music depending on state (normal, scared, dead)
-    /// </summary>
     public void SwitchState(BGMState newState)
     {
-        if (currentState == newState) return; // already playing this state
+        if (currentState == newState) return; 
 
         currentState = newState;
         switch (newState)

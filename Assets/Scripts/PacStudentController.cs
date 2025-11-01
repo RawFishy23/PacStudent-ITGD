@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using System.Collections;
 
 public class PacStudentController : MonoBehaviour
 {
@@ -12,37 +13,29 @@ public class PacStudentController : MonoBehaviour
     [SerializeField] private TileBase pelletTile;
     [SerializeField] private TileBase powerPelletTile;
 
-    // Input
     private Vector2Int lastInput = Vector2Int.zero;
     private Vector2Int currentInput = Vector2Int.zero;
-
-    // Movement
     private Vector3Int gridPosition;
     private Vector3 targetWorldPos;
     public static bool isMoving = false;
 
-    // Animation
     private Animator animator;
-
-    // Components
     private ParticleController particleController;
     private PacStudentAudio audioController;
 
     [Header("Tunnel Teleporters")]
-    public float leftTunnelX;   
-    public float rightTunnelX;  
+    public float leftTunnelX;
+    public float rightTunnelX;
+
+    [Header("Spawn Settings")]
+    public Vector3Int spawnCell;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         particleController = GetComponentInChildren<ParticleController>();
-        audioController = GetComponentInChildren<PacStudentAudio>();;
-
-        gridPosition = levelTilemap.WorldToCell(transform.position);
-        targetWorldPos = levelTilemap.GetCellCenterWorld(gridPosition);
-        transform.position = targetWorldPos;
-
-        animator.SetBool("isMoving", false);
+        audioController = GetComponentInChildren<PacStudentAudio>();
+        StartCoroutine(RespawnPacStudentCoroutine(true));
     }
 
     void Update()
@@ -60,14 +53,12 @@ public class PacStudentController : MonoBehaviour
             MoveLerp();
             animator.SetBool("isMoving", true);
             UpdateFacingDirection(currentInput);
-
             particleController?.PlayMove(true, currentInput);
             audioController?.HandleWalking(true);
         }
         else
         {
             TryMove();
-
             if (!isMoving)
             {
                 animator.SetBool("isMoving", false);
@@ -117,15 +108,13 @@ public class PacStudentController : MonoBehaviour
     void MoveLerp()
     {
         transform.position = Vector3.MoveTowards(transform.position, targetWorldPos, moveSpeed * Time.deltaTime);
-
         if (Vector3.Distance(transform.position, targetWorldPos) < 0.001f)
         {
             transform.position = targetWorldPos;
             gridPosition = levelTilemap.WorldToCell(transform.position);
             isMoving = false;
-
             CheckTileInteraction();
-            CheckTeleporters(); 
+            CheckTeleporters();
         }
     }
 
@@ -140,11 +129,7 @@ public class PacStudentController : MonoBehaviour
     {
         TileBase tile = levelTilemap.GetTile(pos);
         if (tile == null) return true;
-
-        foreach (var wall in wallTiles)
-        {
-            if (tile == wall) return false;
-        }
+        foreach (var wall in wallTiles) if (tile == wall) return false;
         return true;
     }
 
@@ -172,14 +157,8 @@ public class PacStudentController : MonoBehaviour
             levelTilemap.SetTile(gridPosition, null);
             GameManager.Instance.AddScore(50);
             audioController?.PlayPelletEat();
-
-            // Trigger scared mode for all ghosts
             GhostController[] ghosts = FindObjectsOfType<GhostController>();
-            foreach (var ghost in ghosts)
-            {
-                ghost.SetState(GhostState.Scared, 10f); // 10 seconds duration
-            }
-
+            foreach (var ghost in ghosts) ghost.SetState(GhostState.Scared, 10f);
             GameManager.Instance.StartGhostTimer(10f);
         }
     }
@@ -187,31 +166,60 @@ public class PacStudentController : MonoBehaviour
     void CheckTeleporters()
     {
         Vector3 pos = transform.position;
-
-        if (pos.x < leftTunnelX)
-        {
-            pos.x = rightTunnelX;
-            transform.position = pos;
-            gridPosition = levelTilemap.WorldToCell(pos);
-            targetWorldPos = levelTilemap.GetCellCenterWorld(gridPosition);
-        }
-        else if (pos.x > rightTunnelX)
-        {
-            pos.x = leftTunnelX;
-            transform.position = pos;
-            gridPosition = levelTilemap.WorldToCell(pos);
-            targetWorldPos = levelTilemap.GetCellCenterWorld(gridPosition);
-        }
+        if (pos.x < leftTunnelX) pos.x = rightTunnelX;
+        else if (pos.x > rightTunnelX) pos.x = leftTunnelX;
+        transform.position = pos;
+        gridPosition = levelTilemap.WorldToCell(pos);
+        targetWorldPos = levelTilemap.GetCellCenterWorld(gridPosition);
     }
+
     public void Die()
     {
-        // stop input
+        if (!GameManager.Instance.allowInput) return;
         GameManager.Instance.allowInput = false;
-
-        // play death animation
+        GhostController[] ghosts = FindObjectsOfType<GhostController>();
+        foreach (var ghost in ghosts) ghost.canMove = false;
         animator.SetTrigger("Die");
+        GameManager.Instance.LoseLife();
+        bool anyLivesLeft = false;
+        foreach (var heart in GameManager.Instance.lifeImages)
+            if (heart.enabled) { anyLivesLeft = true; break; }
+        if (anyLivesLeft) StartCoroutine(RespawnPacStudentCoroutine(false));
+        else StartCoroutine(GameOverCoroutine(ghosts));
+    }
 
-        // TODO: game over / respawn / lose life logic here
-        Debug.Log("PacStudent Died");
+    private IEnumerator RespawnPacStudentCoroutine(bool isInitialSpawn)
+    {
+        if (!isInitialSpawn) yield return new WaitForSeconds(2f);
+        Vector3 spawnWorldPos = levelTilemap.GetCellCenterWorld(spawnCell);
+        gridPosition = spawnCell;
+        targetWorldPos = spawnWorldPos;
+        transform.position = spawnWorldPos;
+        lastInput = Vector2Int.zero;
+        currentInput = Vector2Int.zero;
+        isMoving = false;
+        animator.ResetTrigger("Die");
+        animator.SetBool("isMoving", false);
+        animator.SetInteger("Direction", 0);
+        particleController?.PlayMove(false, currentInput);
+        audioController?.HandleWalking(false);
+        if (!isInitialSpawn)
+        {
+            GhostController[] ghosts = FindObjectsOfType<GhostController>();
+            foreach (var ghost in ghosts)
+            {
+                ghost.StopAndTeleportToSpawn();
+                ghost.ResumeMovement();
+            }
+        }
+        GameManager.Instance.allowInput = true;
+    }
+
+    private IEnumerator GameOverCoroutine(GhostController[] ghosts)
+    {
+        foreach (var ghost in ghosts) ghost.canMove = false;
+        GameManager.Instance.GameOver();
+        yield return new WaitForSeconds(3f);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("StartScene");
     }
 }
