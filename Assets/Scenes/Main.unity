@@ -908,8 +908,8 @@ MonoBehaviour:
   rightTunnelCell: {x: 18, y: 4, z: 0}
   topExitCell: {x: 0, y: 0, z: 0}
   bottomExitCell: {x: 4, y: 2, z: 0}
-  normalSpeed: 4
-  scaredSpeed: 2
+  normalSpeed: 4.5
+  scaredSpeed: 2.25
   deadSpeed: 2
   ghostNumber: 2
   scaredTimer: 10
@@ -13563,8 +13563,8 @@ MonoBehaviour:
   rightTunnelCell: {x: 18, y: 4, z: 0}
   topExitCell: {x: 0, y: 0, z: 0}
   bottomExitCell: {x: 4, y: 2, z: 0}
-  normalSpeed: 4
-  scaredSpeed: 2
+  normalSpeed: 4.5
+  scaredSpeed: 2.25
   deadSpeed: 2
   ghostNumber: 4
   scaredTimer: 10
@@ -14376,8 +14376,8 @@ MonoBehaviour:
   rightTunnelCell: {x: 18, y: 4, z: 0}
   topExitCell: {x: 3, y: 6, z: 0}
   bottomExitCell: {x: 0, y: 0, z: 0}
-  normalSpeed: 4
-  scaredSpeed: 2
+  normalSpeed: 4.5
+  scaredSpeed: 2.25
   deadSpeed: 2
   ghostNumber: 3
   scaredTimer: 10
@@ -44302,8 +44302,8 @@ MonoBehaviour:
   rightTunnelCell: {x: 18, y: 4, z: 0}
   topExitCell: {x: 3, y: 6, z: 0}
   bottomExitCell: {x: 0, y: 0, z: 0}
-  normalSpeed: 4
-  scaredSpeed: 2
+  normalSpeed: 4.5
+  scaredSpeed: 2.25
   deadSpeed: 2
   ghostNumber: 1
   scaredTimer: 10
