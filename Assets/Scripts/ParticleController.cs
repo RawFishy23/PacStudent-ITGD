@@ -8,6 +8,9 @@ public class ParticleController : MonoBehaviour
     [Header("Wall Hit Prefab")]
     public GameObject wallHitPrefab;
 
+    [Header("Wall Hit Prefab")]
+    public GameObject deathPrefab;
+
     private Vector3Int? lastWallHitTile = null;
 
     public void PlayMove(bool isMoving, Vector2Int moveDir)
@@ -52,5 +55,18 @@ public class ParticleController : MonoBehaviour
     public void ResetWallHit()
     {
         lastWallHitTile = null;
+    }
+
+    public void PlayDeath()
+    {
+        if (deathPrefab != null)
+        {
+            GameObject obj = Instantiate(deathPrefab, transform.position, Quaternion.identity);
+            ParticleSystem ps = obj.GetComponent<ParticleSystem>();
+            if (ps != null)
+                Destroy(obj, ps.main.duration + ps.main.startLifetime.constantMax);
+            else
+                Destroy(obj, 1f);
+        }
     }
 }

@@ -181,6 +181,7 @@ public class PacStudentController : MonoBehaviour
         foreach (var ghost in ghosts) ghost.canMove = false;
         animator.SetTrigger("Die");
         GameManager.Instance.LoseLife();
+        particleController?.PlayDeath();
         bool anyLivesLeft = false;
         foreach (var heart in GameManager.Instance.lifeImages)
             if (heart.enabled) { anyLivesLeft = true; break; }
