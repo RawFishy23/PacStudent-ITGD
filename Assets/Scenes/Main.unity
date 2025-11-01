@@ -914,6 +914,7 @@ MonoBehaviour:
   ghostNumber: 2
   scaredTimer: 10
   canMove: 0
+  isRecovering: 0
   animator: {fileID: 637201934}
 --- !u!95 &637201934
 Animator:
@@ -13569,6 +13570,7 @@ MonoBehaviour:
   ghostNumber: 4
   scaredTimer: 10
   canMove: 0
+  isRecovering: 0
   animator: {fileID: 1449433195}
 --- !u!95 &1449433195
 Animator:
@@ -14371,7 +14373,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d1721a584eb20445088f49ac39f8ee66, type: 2}
   - {fileID: 11400000, guid: 88750e43933c541f29f9adbf105bc609, type: 2}
   pacStudent: {fileID: 344311560}
-  spawnCell: {x: 4, y: 3, z: 0}
+  spawnCell: {x: 3, y: 3, z: 0}
   leftTunnelCell: {x: -11, y: 4, z: 0}
   rightTunnelCell: {x: 18, y: 4, z: 0}
   topExitCell: {x: 3, y: 6, z: 0}
@@ -14382,6 +14384,7 @@ MonoBehaviour:
   ghostNumber: 3
   scaredTimer: 10
   canMove: 0
+  isRecovering: 0
   animator: {fileID: 1970889218}
 --- !u!95 &1970889218
 Animator:
@@ -44297,17 +44300,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d1721a584eb20445088f49ac39f8ee66, type: 2}
   - {fileID: 11400000, guid: 88750e43933c541f29f9adbf105bc609, type: 2}
   pacStudent: {fileID: 344311560}
-  spawnCell: {x: 4, y: 5, z: 0}
+  spawnCell: {x: 3, y: 5, z: 0}
   leftTunnelCell: {x: -11, y: 4, z: 0}
   rightTunnelCell: {x: 18, y: 4, z: 0}
   topExitCell: {x: 3, y: 6, z: 0}
   bottomExitCell: {x: 0, y: 0, z: 0}
   normalSpeed: 4.5
   scaredSpeed: 2.25
-  deadSpeed: 2
+  deadSpeed: 2.25
   ghostNumber: 1
   scaredTimer: 10
   canMove: 0
+  isRecovering: 0
   animator: {fileID: 3000446528874496347}
 --- !u!95 &3000446528874496347
 Animator:

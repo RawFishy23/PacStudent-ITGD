@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Collections.Generic;
 
-public enum GhostState { Normal, Scared, Dead }
+public enum GhostState { Normal, Scared, Dead, Recovering }
 
 [RequireComponent(typeof(Animator))]
 public class GhostController : MonoBehaviour
@@ -24,8 +24,9 @@ public class GhostController : MonoBehaviour
     public float scaredSpeed = 2.25f; 
     public float deadSpeed = 2.25f;   
     public int ghostNumber = 1;
-    public float scaredTimer = 10f; 
+    public float scaredTimer = 10f;
     public bool canMove = false; 
+    public bool isRecovering = false;
 
     private bool inSpawnArea = true;
     private GhostState currentState = GhostState.Normal;
@@ -63,11 +64,21 @@ public class GhostController : MonoBehaviour
         if (currentState == GhostState.Scared)
         {
             scaredTimer -= Time.deltaTime;
+
+            if (!isRecovering && scaredTimer <= 3f)
+            {
+                isRecovering = true;
+                animator.SetBool("Recovering", true);
+            }
+
             if (scaredTimer <= 0f)
             {
-                SetState(GhostState.Normal);
+                currentState = GhostState.Normal;
+                isRecovering = false;
+                animator.SetBool("Recovering", false);
             }
         }
+
 
         if (Vector3.Distance(transform.position, pacStudent.position) < 0.45f)
         {
@@ -75,7 +86,6 @@ public class GhostController : MonoBehaviour
             {
                 GameManager.Instance.AddScore(300);
                 SetState(GhostState.Dead);
-                AudioPlayer.Instance.SwitchState(BGMState.Dead); 
             }
             else if (currentState == GhostState.Normal)
             {
@@ -256,25 +266,34 @@ private bool IsWalkable(Vector3Int cell)
         else
             animator.SetInteger("Direction", delta.y > 0 ? 0 : 1);
 
-        animator.SetInteger("State", (int)currentState);
+        if (currentState == GhostState.Recovering)
+            animator.SetBool("Recovering", true);
+        else
+            animator.SetBool("Recovering", false);
+
+        if (currentState != GhostState.Recovering)
+            animator.SetInteger("State", (int)currentState);
     }
 
-    public void SetState(GhostState newState, float duration = 0f)
+    public void SetState(GhostState state, float duration = 0f)
     {
-        currentState = newState;
-        animator.SetInteger("State", (int)newState);
+        currentState = state;
 
-        if (newState == GhostState.Scared)
+        if (state == GhostState.Scared)
         {
             scaredTimer = duration;
-            GameManager.Instance.StartGhostTimer(duration);
+            isRecovering = false;
+            animator.SetBool("Recovering", false);
+            canMove = true;
         }
-        else if (newState == GhostState.Dead)
+        else if (state == GhostState.Recovering)
         {
-            targetCell = spawnCell;
-            targetWorldPos = levelTilemap.GetCellCenterWorld(spawnCell);
-            lastGridPosition = gridPosition; 
-            isMoving = true;
+            isRecovering = true;
+            animator.SetBool("Recovering", true);
+        }
+        else if (state == GhostState.Normal)
+        {
+            animator.SetBool("Recovering", false);
         }
     }
 
