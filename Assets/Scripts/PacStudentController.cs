@@ -173,7 +173,12 @@ public class PacStudentController : MonoBehaviour
             GameManager.Instance.AddScore(50);
             audioController?.PlayPelletEat();
 
-            GhostManager.Instance.EnterScaredMode();
+            // Trigger scared mode for all ghosts
+            GhostController[] ghosts = FindObjectsOfType<GhostController>();
+            foreach (var ghost in ghosts)
+            {
+                ghost.SetState(GhostState.Scared, 10f); // 10 seconds duration
+            }
 
             GameManager.Instance.StartGhostTimer(10f);
         }
@@ -183,19 +188,30 @@ public class PacStudentController : MonoBehaviour
     {
         Vector3 pos = transform.position;
 
-        if (pos.x < leftTunnelX)  
+        if (pos.x < leftTunnelX)
         {
             pos.x = rightTunnelX;
             transform.position = pos;
             gridPosition = levelTilemap.WorldToCell(pos);
             targetWorldPos = levelTilemap.GetCellCenterWorld(gridPosition);
         }
-        else if (pos.x > rightTunnelX)  
+        else if (pos.x > rightTunnelX)
         {
             pos.x = leftTunnelX;
             transform.position = pos;
             gridPosition = levelTilemap.WorldToCell(pos);
             targetWorldPos = levelTilemap.GetCellCenterWorld(gridPosition);
         }
+    }
+    public void Die()
+    {
+        // stop input
+        GameManager.Instance.allowInput = false;
+
+        // play death animation
+        animator.SetTrigger("Die");
+
+        // TODO: game over / respawn / lose life logic here
+        Debug.Log("PacStudent Died");
     }
 }

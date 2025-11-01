@@ -17,7 +17,6 @@ public class CherryMover : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
 
-        // Destroy when it leaves the level area (off-screen)
         if (Vector2.Distance(transform.position, targetPos) < 0.1f)
         {
             controller.NotifyCherryDestroyed();

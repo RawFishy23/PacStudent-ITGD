@@ -1,25 +1,71 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
+public enum BGMState { Intro, Normal, Scared, Dead }
+
+[RequireComponent(typeof(AudioSource))]
 public class AudioPlayer : MonoBehaviour
 {
-    public AudioClip[] audioPlayerOrder;
-    private AudioSource audioSource;
+    [Header("Audio Clips")]
+    public AudioClip introClip;
+    public AudioClip normalBGM;
+    public AudioClip scaredBGM;
+    public AudioClip deadBGM;
 
-    // Start is called before the first frame update
-    void Start()
+    public static AudioPlayer Instance;
+    private AudioSource audioSource;
+    private BGMState currentState = BGMState.Intro;
+
+    void Awake()
     {
-        audioSource = gameObject.AddComponent<AudioSource>();
-        
-        audioSource.clip = audioPlayerOrder[0];                
+        if (Instance == null)
+            Instance = this;
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        audioSource = GetComponent<AudioSource>();
+        audioSource.loop = false;
+        PlayClip(introClip);
+        StartCoroutine(CheckIntroFinished());
+    }
+
+    private void PlayClip(AudioClip clip, bool loop = true)
+    {
+        if (clip == null) return;
+        audioSource.clip = clip;
+        audioSource.loop = loop;
         audioSource.Play();
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator CheckIntroFinished()
     {
+        // Wait until intro finishes
+        yield return new WaitForSeconds(introClip.length);
+        SwitchState(BGMState.Normal);
+    }
 
+    /// <summary>
+    /// Call this to change music depending on state (normal, scared, dead)
+    /// </summary>
+    public void SwitchState(BGMState newState)
+    {
+        if (currentState == newState) return; // already playing this state
+
+        currentState = newState;
+        switch (newState)
+        {
+            case BGMState.Normal:
+                PlayClip(normalBGM, true);
+                break;
+            case BGMState.Scared:
+                PlayClip(scaredBGM, true);
+                break;
+            case BGMState.Dead:
+                PlayClip(deadBGM, true);
+                break;
+        }
     }
 }

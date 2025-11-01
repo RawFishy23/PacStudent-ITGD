@@ -58,7 +58,13 @@ public class GameManager : MonoBehaviour
             if (ghostTimer <= 0)
             {
                 ghostTimer = 0;
-                ghostTimerText.gameObject.SetActive(false);
+                if (ghostTimerText != null)
+                    ghostTimerText.gameObject.SetActive(false);
+            }
+            else
+            {
+                if (ghostTimerText != null)
+                    ghostTimerText.text = Mathf.Ceil(ghostTimer).ToString(); // <--- update UI
             }
         }
     }
