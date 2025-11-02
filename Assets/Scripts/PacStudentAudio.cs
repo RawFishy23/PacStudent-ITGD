@@ -31,7 +31,8 @@ public class PacStudentAudio : MonoBehaviour
 
     public void PlayWallHit()
     {
-        wallHitSource.PlayOneShot(wallHitClip);
+        if (!wallHitSource.isPlaying)
+            wallHitSource.PlayOneShot(wallHitClip);
     }
 
     public void PlayPelletEat()

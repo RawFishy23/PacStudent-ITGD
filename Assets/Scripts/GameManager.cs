@@ -150,11 +150,32 @@ public class GameManager : MonoBehaviour
 
     #region Score & Lives
 
-    public void AddScore(int amount)
+    public void AddScore(int amount, bool isPowerPellet = false)
     {
         score += amount;
         UpdateScoreUI();
-        FindObjectOfType<FogOfWar>().EatPellet();
+
+        FogOfWar fogOfWar = FindObjectOfType<FogOfWar>();
+        if (fogOfWar != null)
+            fogOfWar.EatPellet();
+
+        PacStudentAudio pacAudio = FindObjectOfType<PacStudentAudio>();
+        if (pacAudio != null)
+        {
+            pacAudio.PlayPelletEat();
+        }
+
+        if (isPowerPellet)
+        {
+            GhostController[] ghosts = FindObjectsOfType<GhostController>();
+            foreach (var ghost in ghosts)
+            {
+                ghost.SetState(GhostState.Scared, 10f); 
+            }
+
+            if (AudioPlayer.Instance != null)
+                AudioPlayer.Instance.SwitchState(BGMState.Scared);
+        }
     }
 
     public void LoseLife()
