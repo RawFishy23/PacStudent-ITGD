@@ -151,6 +151,12 @@ public class PacStudentController : MonoBehaviour
             levelTilemap.SetTile(gridPosition, null);
             GameManager.Instance.AddScore(10);
             audioController?.PlayPelletEat();
+
+        if (GameManager.Instance.AreAllPelletsEaten())
+        {
+            GameManager.Instance.GameOver(); // or trigger next level
+        }
+
         }
         else if (tile == powerPelletTile)
         {
@@ -160,6 +166,11 @@ public class PacStudentController : MonoBehaviour
             GhostController[] ghosts = FindObjectsOfType<GhostController>();
             foreach (var ghost in ghosts) ghost.SetState(GhostState.Scared, 10f);
             GameManager.Instance.StartGhostTimer(10f);
+
+            if (GameManager.Instance.AreAllPelletsEaten())
+            {
+                GameManager.Instance.GameOver(); // or trigger next level
+            }
         }
     }
 

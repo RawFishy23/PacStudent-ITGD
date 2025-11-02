@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Tilemaps;
 
 public class GameManager : MonoBehaviour
 {
@@ -33,6 +34,13 @@ public class GameManager : MonoBehaviour
     private float ghostTimer = 0f;
 
     public bool allowInput = false;
+
+    public Tilemap pelletTilemap; // assign your pellet tilemap
+    public TileBase normalPellet;
+    public TileBase powerPellet;
+
+    public int ScaredGhostsCount { get; private set; } = 0;
+
 
     private void Awake()
     {
@@ -123,6 +131,17 @@ public class GameManager : MonoBehaviour
         }
 
         Debug.Log("Countdown finished! Game started.");
+    }
+
+    public bool AreAllPelletsEaten()
+    {
+        foreach (Vector3Int pos in pelletTilemap.cellBounds.allPositionsWithin)
+        {
+            TileBase tile = pelletTilemap.GetTile(pos);
+            if (tile == normalPellet || tile == powerPellet)
+                return false;
+        }
+        return true;
     }
 
     #endregion
@@ -220,6 +239,23 @@ public class GameManager : MonoBehaviour
     }
 
     public float GetRemainingGhostTime() => ghostTimer;
+
+        public void GhostBecameScared()
+    {
+        ScaredGhostsCount++;
+        if (AudioPlayer.Instance != null)
+            AudioPlayer.Instance.SwitchState(BGMState.Scared);
+    }
+
+    public void GhostReturnedToNormal()
+    {
+        ScaredGhostsCount = Mathf.Max(0, ScaredGhostsCount - 1);
+        if (ScaredGhostsCount == 0)
+        {
+            if (AudioPlayer.Instance != null)
+                AudioPlayer.Instance.SwitchState(BGMState.Normal);
+        }
+    }
 
     #endregion
 }

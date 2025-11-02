@@ -205,7 +205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 153804748}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 532797602}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: MoveToScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &153804748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1397,6 +1409,14 @@ PrefabInstance:
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6649991152602053173, guid: eac1c44f8f8104877b21abfb7c1263f0, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: e2eca6b80d7be4b898c44d72731b4ece, type: 3}
+    - target: {fileID: 6649991152602053173, guid: eac1c44f8f8104877b21abfb7c1263f0, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e2eca6b80d7be4b898c44d72731b4ece, type: 3}
     - target: {fileID: 9024156946943035280, guid: eac1c44f8f8104877b21abfb7c1263f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1437,7 +1457,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5044723037694000840, guid: eac1c44f8f8104877b21abfb7c1263f0, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
