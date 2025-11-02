@@ -4,6 +4,8 @@ using TMPro;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Tilemaps;
+using UnityEngine.SceneManagement;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -35,7 +37,7 @@ public class GameManager : MonoBehaviour
 
     public bool allowInput = false;
 
-    public Tilemap pelletTilemap; // assign your pellet tilemap
+    public Tilemap pelletTilemap; 
     public TileBase normalPellet;
     public TileBase powerPellet;
 
@@ -152,6 +154,7 @@ public class GameManager : MonoBehaviour
     {
         score += amount;
         UpdateScoreUI();
+        FindObjectOfType<FogOfWar>().EatPellet();
     }
 
     public void LoseLife()
@@ -211,21 +214,25 @@ public class GameManager : MonoBehaviour
 
     private void SaveHighScore()
     {
-        int previousHigh = PlayerPrefs.GetInt("HighScore", 0);
+        string levelName = SceneManager.GetActiveScene().name;
+        string scoreKey = $"HighScore_{levelName}";
+        string timeKey = $"HighScoreTime_{levelName}";
+
+        int previousHigh = PlayerPrefs.GetInt(scoreKey, 0);
 
         if (score > previousHigh)
         {
-            PlayerPrefs.SetInt("HighScore", score);
+            PlayerPrefs.SetInt(scoreKey, score);
 
             int minutes = Mathf.FloorToInt(timer / 60f);
             int seconds = Mathf.FloorToInt(timer % 60f);
             int milliseconds = Mathf.FloorToInt((timer * 100) % 100);
 
             string formattedTime = $"{minutes:00}:{seconds:00}:{milliseconds:00}";
-            PlayerPrefs.SetString("HighScoreTime", formattedTime);
+            PlayerPrefs.SetString(timeKey, formattedTime);
 
             PlayerPrefs.Save();
-            Debug.Log($"New High Score Saved: {score} ({formattedTime})");
+            Debug.Log($"New High Score Saved for {levelName}: {score} ({formattedTime})");
         }
     }
 

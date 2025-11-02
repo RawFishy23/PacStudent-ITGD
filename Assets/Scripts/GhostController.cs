@@ -272,7 +272,7 @@ public class GhostController : MonoBehaviour
             if (t == null) return true;
             foreach (var wall in wallTiles)
                 if (t == wall)
-                    return true; // dead ignores walls (allowed)
+                    return true;  
             return true;
         }
 
@@ -307,13 +307,11 @@ public class GhostController : MonoBehaviour
     {
         if (currentState == GhostState.Scared && state != GhostState.Scared)
         {
-            // Ghost leaving scared state
             GameManager.Instance.GhostReturnedToNormal();
         }
 
         if (state == GhostState.Scared && currentState != GhostState.Scared)
         {
-            // Ghost entering scared state
             GameManager.Instance.GhostBecameScared();
         }
 

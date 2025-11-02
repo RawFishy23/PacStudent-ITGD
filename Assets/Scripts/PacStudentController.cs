@@ -154,7 +154,7 @@ public class PacStudentController : MonoBehaviour
 
         if (GameManager.Instance.AreAllPelletsEaten())
         {
-            GameManager.Instance.GameOver(); // or trigger next level
+            GameManager.Instance.GameOver(); 
         }
 
         }
@@ -169,7 +169,7 @@ public class PacStudentController : MonoBehaviour
 
             if (GameManager.Instance.AreAllPelletsEaten())
             {
-                GameManager.Instance.GameOver(); // or trigger next level
+                GameManager.Instance.GameOver(); 
             }
         }
     }
